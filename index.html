@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ScriBBler</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    
+</head>
+
+<body>
+    <div class="header-container">
+        <aside>
+            <a href="./index.html">ScriBBler</a>
+            <p>Explore, Imagine, Create</p>
+        </aside>
+
+        <aside>
+            <button onclick="signupOpen()">Sign Up</button>
+            <button onclick="signinOpen()">Sign In</button>
+        </aside>
+    </div>
+
+    <div class="center">
+        <button onclick="window.location.assign('./templates/second.html')">All Posts</button>
+        <button onclick="createPostOpen()">Create Post</button>
+    </div>
+
+    <!-- sign up model -->
+    <div class="modal-container" id="signup-modal-container">
+        <div class="modal">
+            <div class="header-container">
+                <strong>Get Started</strong>
+                <button onclick="signupClose()">close</button>
+            </div>
+            <form class="myForm" id="signup-form" method="POST" onsubmit="submitSignUp()">
+
+                <label>Name <small class="hide" id="name-text">Name must be filled</small></label>
+                <input onblur="validateName()" type="text" name="name" id="name" placeholder="Enter your name">
+
+                <label>Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username">
+
+                <label>Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+
+                <label>Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Re-enter your password">
+
+                <br>
+                <input type="submit" disabled name="signup" value="Sign Up">  
+            </form>
+        </div>
+    </div>
+    <!-- modals -->
+    <div class="modal-container" id="signin-modal-container">
+        <div class="modal">
+            <div class="header-container">
+                <strong>Welcome Back!</strong>
+                <button onclick="signinClose()">close</button>
+            </div>
+
+            <form class="myForm" id="signin-form" method="POST" onsubmit="submitSignin()">
+                <label>Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username">
+    
+                <label>Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+                
+                <br>
+                <input type="submit" name="signin" value="Sign In">   
+            </form>
+            
+            <p class="alignCenter">Not a member? <a href="javascript:notMember()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div class="modal-container" id="create-post-modal-container">
+        <div class="modal">
+            <div class="header-container">
+                <strong>Pen Your Post</strong>
+                <button onclick="createPostClose()">close</button>
+            </div>
+
+            <form class="myForm" id="create-post-form" method="post" onsubmit="submitCreatePost()">
+                <label>Title</label>
+                <input type="text" name="title" id="title">
+    
+                <label>Contents</label>
+                <textarea name="contents" id="" cols="30" rows="10"></textarea>
+                
+                <br>
+                <input type="submit" name="createPost" value="Create Post">   
+            </form>
+            
+        </div>
+    </div>
+
+
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

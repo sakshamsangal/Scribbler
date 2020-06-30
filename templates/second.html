@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="post-container">
+        <div class="post-item" id="post1">
+            <h3>John Green</h3>
+            <div class="post-desc">
+                <strong>The Fault in Our Stars</strong>
+                <div class="desc">Despite the tumor-shrinking medical miracle that has bought her a few more years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at the Cancer Kid Support Group, Hazel's story is about to be completely rewritten.</div>    
+            </div>
+            
+            <div class="post-aside-section">
+                <button onclick="deletePostOpen('post1')">delete</button>
+                <button onclick="window.location.assign('./third.html')">more</button>
+            </div>
+
+        </div>
+
+
+        <div class="post-item" id="post2">
+            <h3>J.R.R. Tolkien</h3>
+            <div class="post-desc">
+                <strong>The Hobbit</strong>
+                <div class="desc">Bilbo Baggins, a respectable, well-to-do hobbit, lives comfortably in his hobbit hole until the day the wandering wizard Gandalf chooses him to take part in an adventure from which he may never return.</div>    
+            </div>
+            
+            <div class="post-aside-section">
+                <button onclick="deletePostOpen('post2')">delete</button>
+                <button>more</button>
+            </div>
+
+        </div>
+
+        <div class="post-item" id="post3">
+            <h3>J.D. Salinger</h3>
+            <div class="post-desc">
+                <strong>The Catcher in the Rye</strong>
+                <div class="desc">With the author's death, the classic novel about young Holden Caulfield's disillusionment with the adult world and its "phoniness" will only rise in popularity — and controversy, since it is a favorite target of censors, who often cite profanity and sexual references in their efforts to ban the book.</div>    
+            </div>
+            
+            <div class="post-aside-section">
+                <button onclick="deletePostOpen('post3')">delete</button>
+                <button>more</button>
+            </div>
+
+        </div>
+
+        <div class="post-item" id="post4">
+            <h3> J.R.R. Tolkien</h3>
+            <div class="post-desc">
+                <strong>The Lord of the Rings</strong>
+                <div class="desc">Tolkien's seminal three-volume epic chronicles the War of the Ring, in which Frodo the hobbit and his companions set out to destroy the evil Ring of Power and restore peace to Middle-earth. The beloved trilogy still casts a long shadow, having established some of the most familiar and enduring tropes in fantasy literature.</div>    
+            </div>
+            
+            <div class="post-aside-section">
+                <button onclick="deletePostOpen('post4')">delete</button>
+                <button>more</button>
+            </div>
+
+        </div>
+
+        <div class="post-item" id="post5">
+            <h3>Ray Bradbury</h3>
+            <div class="post-desc">
+                <strong>Fahrenheit 451</strong>
+                <div class="desc">In a far future world, television dominates, and books are outlawed. The totalitarian regime has ordered all books to be burned by "firemen," whose job is to start the fires rather than stop them. But one fireman begins to see the value of the printed word.</div>    
+            </div>
+            
+            <div class="post-aside-section">
+                <button onclick="deletePostOpen('post5')">delete</button>
+                <button>more</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- modals -->
+    <div class="modal-container" id="delete-post-modal-container">
+        <div class="modal">
+            <strong>Do you really want to delete?</strong>
+            <div class="header-container">
+                <button onclick="deletePost()">Yes</button>
+                <button onclick="deletePostClose()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/second.js"></script>
+</body>
+
+
+</html>
